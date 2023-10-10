@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -20,20 +22,99 @@
 }
 
 
+:root {
+
+    /*    Paars #5722CD;*/
+    /*    Blauw #4845E4;*/
+    /*    Roze #ED4385;*/
+    /*    Zwart #0C0C0C (voor standaard tekst);*/
+    /*    Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:*/
+    /*Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
+    /*Grijs #7A7A7A (voor de service-tegel tekst);*/
+
+    --color-purple: #5722CD;
+    --color-blue: #4845E4;
+    --color-pink: #ED4385;
+    --color-black: #0C0C0C;
+    --color-light-purple: #F2F0FF;
+    --color-white: #fff;
+    --color-lgrey: #F3F6F9;
+    --color-grey: #7A7A7A;
+    --default-margin: 20px;
+
+    font-size: 10px;
+
+
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    color: var(--color-black);
+
+
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-size: 3.3rem;
+}
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 header {
+    /*border: 6px dashed blue;*/
     display: flex;
-    background-color: #4845E4;
-    color: #fff;
+    background-color: var(--color-purple);
+    color: var(--color-white);
     flex-direction: column;
     align-items: center;
+    /*padding: 0 3rem;*/
 }
 
-header .inner-container {
-    padding: 10rem;
+.inner-container {
+    width: 95%;
+    /*border: 6px dashed red;*/
+    /*margin: 0 5rem;*/
 }
+
+.intro-header {
+    /*border: dashed 5px black;*/
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.intro-wrapper {
+    /*border: 5px dashed purple;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.intro-content {
+    padding: 5rem 15%;
+}
+.intro-end {
+    /*border: 5px dashed pink;*/
+}
+
+.intro-header p {
+    margin: 3rem 0;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+
 
 nav {
     width: 100%;
@@ -43,7 +124,43 @@ nav {
     display: flex;
     justify-content: flex-end;
     list-style: none;
+
 }
+
+.menu li {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: var(--default-margin);
+
+}
+
+button {
+    text-transform: uppercase;
+    background-color: var(--color-pink);
+    color: var(--color-light-purple);
+    padding: 1.8rem;
+    border-radius: 3rem;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.inner-wrapper {
+    display: flex;
+    border: 6px purple dashed;
+    width: 80%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* --------------- 3.1 Reusables ----------------------- */
 
 /* --------------- 3.2 Other --------------------------- */
